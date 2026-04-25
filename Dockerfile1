@@ -1,0 +1,14 @@
+FROM node:24-alpine
+WORKDIR /app
+
+# RUN addgroup dev && adduser -D -G dev andre
+# USER andre
+
+COPY . .
+RUN npm install
+RUN apk add --no-cache python3 g++ make
+# ENV API_URL=https:localhost:8000
+
+CMD ["node", "src/index.js"]
+EXPOSE 3000
+
