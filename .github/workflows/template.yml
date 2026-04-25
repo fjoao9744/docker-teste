@@ -7,6 +7,7 @@ jobs:
     steps: 
       - name: Checkout code
         uses: actions/checkout@v4
+      - name: teste
         run:    echo "${{ secrets.DOCKER_USERNAME }}"
 
       - name: Login DockerHub
