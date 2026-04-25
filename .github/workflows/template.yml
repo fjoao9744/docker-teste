@@ -1,0 +1,10 @@
+name: Delpoy teste
+run-name: Deploy to dockerhub
+on: [push]
+jobs:
+  Explore-GitHub-Action:
+    runs-on: ubuntu-latest
+    steps:
+      run: docker build -t fjoao9744/docker-teste:v3 .
+      run: docker push fjoao9744/docker-teste:v3
+      
